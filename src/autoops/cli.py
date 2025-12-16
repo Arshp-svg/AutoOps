@@ -1,12 +1,13 @@
-import typer
+from .config import load_env
 from .poller import start_polling
 
-app = typer.Typer()
-
-@app.command()
-def run():
-    """Start AutoOps in fully automatic polling mode."""
+def main():
+    """
+    AutoOps – Fully automatic AI DevOps agent.
+    """
+    load_env()  # ✅ load .env FIRST
+    print("🔁 AutoOps polling GitHub for CI failures...")
     start_polling()
 
 if __name__ == "__main__":
-    app()
+    main()
