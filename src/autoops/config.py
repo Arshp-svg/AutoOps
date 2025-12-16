@@ -1,12 +1,17 @@
-
-import os
-from dotenv import load_dotenv
 from pathlib import Path
+from dotenv import load_dotenv
+import os
 
-# load .env from current working directory if present
-ENV_PATH = Path.cwd() / ".env"
-if ENV_PATH.exists():
-    load_dotenv(dotenv_path=ENV_PATH)
+ENV_PATH = Path(".env")
+
+
+def load_env():
+    if ENV_PATH.exists():
+        load_dotenv(dotenv_path=ENV_PATH)
+
+
+# Load .env immediately on import
+load_env()
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 REPO_OWNER = os.getenv("REPO_OWNER")
