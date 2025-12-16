@@ -41,6 +41,16 @@ def validate_config():
     missing = [key for key, value in required_vars.items() if not value]
     if missing:
         raise ValueError(
-            f"Missing required environment variables: {', '.join(missing)}\n"
-            f"Set them in your environment or create a .env file in your project directory."
+            f"❌ Missing required environment variables: {', '.join(missing)}\n\n"
+            f"Please configure AutoOps using one of these methods:\n\n"
+            f"1. Create a .env file in your current directory:\n"
+            f"   GITHUB_TOKEN=ghp_xxx\n"
+            f"   REPO_OWNER=your-username\n"
+            f"   REPO_NAME=your-repo\n"
+            f"   GROQ_API_KEY=gsk_xxx\n\n"
+            f"2. Or create ~/.autoops/.env\n\n"
+            f"3. Or set environment variables:\n"
+            f"   Linux/Mac: export GITHUB_TOKEN=ghp_xxx\n"
+            f"   Windows:   $env:GITHUB_TOKEN='ghp_xxx'\n"
+        )
         )
