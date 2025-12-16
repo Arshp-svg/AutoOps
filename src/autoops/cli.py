@@ -5,6 +5,7 @@ import json
 import requests
 from pathlib import Path
 from .config import load_env, ENV_PATH
+load_env()
 
 app = typer.Typer(add_completion=False)
 
