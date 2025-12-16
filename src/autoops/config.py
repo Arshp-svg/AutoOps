@@ -53,4 +53,4 @@ def validate_config():
             f"   Linux/Mac: export GITHUB_TOKEN=ghp_xxx\n"
             f"   Windows:   $env:GITHUB_TOKEN='ghp_xxx'\n"
         )
-        )
+        
