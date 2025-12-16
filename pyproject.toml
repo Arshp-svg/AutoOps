@@ -1,21 +1,12 @@
-
-[build-system]
-requires = ["setuptools>=61", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "autoops"
-version = "0.1.1"
-description = "AutoOps - AI DevOps Agent (Groq backend)"
-readme = "README.md"
-requires-python = ">=3.9"
+version = "0.2.0"
+description = "AutoOps: Fully automatic AI DevOps agent with polling mode (no webhooks required)"
+authors = [{ name = "AutoOps" }]
 dependencies = [
-    "fastapi>=0.95.0",
-    "uvicorn>=0.22.0",
-    "typer[all]>=0.7.0",
-    "python-dotenv>=1.0.0",
-    "requests>=2.28.0",
-    "groq>=0.2.0"
+  "typer",
+  "requests",
+  "python-dotenv"
 ]
 
 [project.scripts]
