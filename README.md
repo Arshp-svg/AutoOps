@@ -90,6 +90,3 @@ No inbound connections required.
 - 📣 Slack / Teams notifications
 - 🐳 Docker & cloud deployment
 
-📄 License
-
-MIT
